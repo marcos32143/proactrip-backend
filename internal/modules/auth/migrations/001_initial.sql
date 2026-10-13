@@ -120,6 +120,7 @@ SELECT r.id, p.id FROM roles r, permissions p WHERE r.name = 'admin';
 CREATE TABLE IF NOT EXISTS users(
     id uuid PRIMARY KEY DEFAULT uuidv7(),
     email varchar(255) NOT NULL UNIQUE,
+    first_name varchar(255),
     email_verified boolean DEFAULT FALSE,
     email_verified_at timestamptz,
     password_hash varchar(255),
