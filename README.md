@@ -8,7 +8,7 @@
 
 API server for the **Proactrip** travel platform — AI-powered flight + hotel search, user authentication, profile management, admin dashboard, email notifications, and environment detection.
 
-> **Sobre este fork.** Este repositorio es un fork de [ProacTrip/Backend](https://github.com/ProacTrip/Backend), escrito por [@soyAurelio](https://github.com/soyAurelio). Lo mantiene [@marcos32143](https://github.com/marcos32143), autor del frontend: [marcos32143/proactrip-frontend](https://github.com/marcos32143/proactrip-frontend).
+> **Sobre este fork.** Este repositorio es un fork de [ProacTrip/Backend](https://github.com/ProacTrip/Backend), escrito por [@soyAurelio](https://github.com/soyAurelio). Lo mantiene [@soymarcoscasas](https://github.com/soymarcoscasas), autor del frontend: [soymarcoscasas/proactrip-frontend](https://github.com/soymarcoscasas/proactrip-frontend).
 >
 > Cambios respecto al original:
 > - `001_initial.sql`: añadida la columna `first_name` a `users`, sin la cual la API no arrancaba en una base de datos limpia.
