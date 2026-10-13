@@ -59,7 +59,9 @@ func (a *Adapter) SearchFlights(ctx context.Context, req domain.FlightSearchRequ
 
 // GetFlightDetails retrieves booking details for a booking token.
 func (a *Adapter) GetFlightDetails(ctx context.Context, req domain.FlightDetailsRequest) (*domain.FlightDetailsResponse, error) {
-	raw, err := a.client.GetBookingDetails(ctx, req.BookingToken, req.Adults, req.Currency, req.DepartureID, req.ArrivalID, req.OutboundDate, req.ReturnDate)
+	departureID := resolveIdentifier(ctx, req.DepartureID)
+	arrivalID := resolveIdentifier(ctx, req.ArrivalID)
+	raw, err := a.client.GetBookingDetails(ctx, req.BookingToken, req.Adults, req.Currency, departureID, arrivalID, req.OutboundDate, req.ReturnDate)
 	if err != nil {
 		return nil, fmt.Errorf("serpapi booking details: %w", err)
 	}
