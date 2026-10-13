@@ -5,9 +5,16 @@
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-18.3-336791?logo=postgresql)](https://www.postgresql.org/)
 [![DragonflyDB](https://img.shields.io/badge/DragonflyDB-v1.38-EE7600)](https://www.dragonflydb.io/)
 [![Docker](https://img.shields.io/badge/Docker-✓-2496ED?logo=docker)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 API server for the **Proactrip** travel platform — AI-powered flight + hotel search, user authentication, profile management, admin dashboard, email notifications, and environment detection.
+
+> **Sobre este fork.** Este repositorio es un fork de [ProacTrip/Backend](https://github.com/ProacTrip/Backend), escrito por [@soyAurelio](https://github.com/soyAurelio). Lo mantiene [@marcos32143](https://github.com/marcos32143), autor del frontend: [marcos32143/proactrip-frontend](https://github.com/marcos32143/proactrip-frontend).
+>
+> Cambios respecto al original:
+> - `001_initial.sql`: añadida la columna `first_name` a `users`, sin la cual la API no arrancaba en una base de datos limpia.
+> - `GetFlightDetails`: convierte la ciudad en código IATA (como ya hacía la búsqueda de vuelos), porque SerpAPI rechazaba nombres como "MADRID".
+>
+> **Licencia:** el repositorio original no incluye un archivo `LICENSE`, así que este fork tampoco lo añade. Los derechos del código original son de su autor.
 
 ---
 
